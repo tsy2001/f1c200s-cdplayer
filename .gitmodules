@@ -1,0 +1,4 @@
+[submodule "f1c200s-linux5.7"]
+	path = f1c200s-linux5.7
+	url = https://github.com/tsy2001/f1c200s-linux5.7.git
+	branch = cd-player-flash
