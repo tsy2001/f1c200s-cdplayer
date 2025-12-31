@@ -10,10 +10,10 @@ Linux BSP For Allinner F1C100S/F1C200S
 ### SDK download from GitHub
 ``` sh
   git clone https://github.com/tsy2001/f1c200s-cdplayer.git
+  cd ./f1c200s-cdplayer
+  git submodule update --init --recursive
 ```
-``` sh
-  cd f1c200s-cdplayer/
-```
+
 ### Compile sunxi-tools
 ``` sh
   cd sunxi-tools/
