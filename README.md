@@ -89,11 +89,11 @@ gcc version 13.4.0 (Buildroot 2025.02.9)
   sudo tar -xf buildroot-2025.02.9/output/images/rootfs.tar -C /media/<username>/<your sdcard sdb2 partition>/
   sync
 ```
-recompile uboot
+recompile uboot  
 ``` sh
+  git clone https://github.com/tsy2001/f1c200s-uboot.git -b nano-v2018.01
   cd f1c200s-uboot/
-  git checkout nano-v2018.01
-  make ARCH=arm CROSS_COMPILE=arm-buildroot-linux-musleabi-
+  make
   sudo dd if=u-boot-sunxi-with-spl.bin of=/dev/sdb bs=1024 seek=8
 ```
 
