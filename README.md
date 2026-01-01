@@ -1,6 +1,11 @@
-# High-Res CD Player 
-Linux BSP For Allinner F1C100S/F1C200S
+# HiFi CD Player 
+Linux BSP For Allinner F1C100S/F1C200S  
 
+### Hardware
+https://oshwhub.com/tsy2001/quanzhi-f1c100sf1c200shificd-mus
+
+### Preview
+https://www.bilibili.com/video/BV1griABUEk2
 
 ### Ubuntu 20.04 environment 
 ```sh
@@ -63,6 +68,13 @@ gcc version 13.4.0 (Buildroot 2025.02.9)
   cd f1c200s-uboot/
   make menuconfig
   make -j8
+```
+
+### Compile Application
+``` sh
+  cd f1c200s-u8g2-cmp/user
+  # Modify Makefile SYSROOT=<YOUR BUILDROOT SYSROOT>
+  make
 ```
   
 ### Flash to SPI-Flash
