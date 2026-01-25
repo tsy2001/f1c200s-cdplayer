@@ -14,4 +14,4 @@
 	url = https://github.com/linux-sunxi/sunxi-tools.git
 [submodule "f1c200s-u8g2-cmp"]
 	path = f1c200s-u8g2-cmp
-	url = git@github.com:tsy2001/f1c200s-u8g2-cmp.git
+	url = https://github.com/tsy2001/f1c200s-u8g2-cmp.git
