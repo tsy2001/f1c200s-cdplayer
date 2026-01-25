@@ -1,10 +1,21 @@
 # flash烧录  
-仅支持W25Q128系列NOR FLASH存储器!!! 
+仅支持W25Q128系列NOR FLASH存储器!!!  
+
+## 更新日志  
+v1.1 修复bug  
+``` sh
+1、更改交叉编译工具链为uclibc；
+2、修复部分CD的"album_info"值空缺导致空指针访问的bug；
+3、改进播放CD到最后一首再跳转回第一首的方法；
+4、修复释放cdio时报"Segmentation fault"的bug；
+5、修复sleep_ms导致的bug；
+```
+v1.0 首次版本发布  
 
 ## 全量烧录
-flashimg.bin为全量镜像，初次使用只需烧录这一个  
+flashimg-x.bin为全量镜像，初次使用只需烧录这一个  
 ``` sh
-sudo sunxi-fel -p spiflash-write 0 flashimg.bin 
+sudo sunxi-fel -p spiflash-write 0 flashimg-v1.1.bin 
 ```
 注: uboot对cpu和ddr进行超频，CPU 720MHz,DDR 168MHz,如果你的uboot启动不来请单独再烧一遍这个  
 ``` sh
