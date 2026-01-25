@@ -38,22 +38,22 @@ https://www.bilibili.com/video/BV1griABUEk2
 get buildroot toolchain
 ``` sh
   make sdk
-  cp output/images/arm-buildroot-linux-musleabi_sdk-buildroot.tar.gz  (PATH TO SAVE YOUR TOOLCHAIN)/
-  tar -xf (PATH TO SAVE YOUR TOOLCHAIN)/arm-buildroot-linux-musleabi_sdk-buildroot.tar.gz
+  cp output/images/arm-buildroot-linux-uclibcgnueabi_sdk-buildroot.tar.gz  (PATH TO SAVE YOUR TOOLCHAIN)/
+  tar -xf (PATH TO SAVE YOUR TOOLCHAIN)/arm-buildroot-linux-uclibcgnueabi_sdk-buildroot.tar.gz
   # append on ~/.bashrc
-  export PATH=$PATH:(PATH TO SAVE YOUR TOOLCHAIN)/arm-buildroot-linux-musleabi_sdk-buildroot/bin
+  export PATH=$PATH:(PATH TO SAVE YOUR TOOLCHAIN)/arm-buildroot-linux-uclibcgnueabi_sdk-buildroot/bin
 ```
 checkout toolchain (Make sure the command is executable in any folder.)
 ``` sh
-  arm-buildroot-linux-musleabi-gcc -v  
+  arm-buildroot-linux-uclibcgnueabi-gcc -v  
 ```
 ``` sh
-xec/gcc/arm-buildroot-linux-musleabi/13.4.0/lto-wrapper
-Target: arm-buildroot-linux-musleabi
-Configured with: ./configure --prefix=/home/tsy/F1C200S/flash/buildroot-2025.02.9/output/host --sysconfdir=/home/tsy/F1C200S/flash/buildroot-2025.02.9/output/host/etc --enable-static --target=arm-buildroot-linux-musleabi --with-sysroot=/home/tsy/F1C200S/flash/buildroot-2025.02.9/output/host/arm-buildroot-linux-musleabi/sysroot --enable-__cxa_atexit --with-gnu-ld --disable-libssp --disable-multilib --disable-decimal-float --enable-plugins --enable-lto --with-gmp=/home/tsy/F1C200S/flash/buildroot-2025.02.9/output/host --with-mpc=/home/tsy/F1C200S/flash/buildroot-2025.02.9/output/host --with-mpfr=/home/tsy/F1C200S/flash/buildroot-2025.02.9/output/host --with-pkgversion='Buildroot 2025.02.9' --with-bugurl=https://gitlab.com/buildroot.org/buildroot/-/issues --without-zstd --disable-libmpx --disable-libquadmath --disable-libquadmath-support --disable-libsanitizer --enable-tls --enable-threads --without-isl --without-cloog --with-float=soft --with-abi=aapcs-linux --with-cpu=arm926ej-s --with-float=soft --with-mode=arm --enable-languages=c --with-build-time-tools=/home/tsy/F1C200S/flash/buildroot-2025.02.9/output/host/arm-buildroot-linux-musleabi/bin --enable-shared --disable-libgomp
+xec/gcc/arm-buildroot-linux-uclibcgnueabi/13.4.0/lto-wrapper
+Target: arm-buildroot-linux-uclibcgnueabi
+Configured with: ./configure --prefix=/home/tsy/F1C200S/flash/buildroot-2025.02.9/output/host --sysconfdir=/home/tsy/F1C200S/flash/buildroot-2025.02.9/output/host/etc --enable-static --target=arm-buildroot-linux-uclibcgnueabi --with-sysroot=/home/tsy/F1C200S/flash/buildroot-2025.02.9/output/host/arm-buildroot-linux-uclibcgnueabi/sysroot --enable-__cxa_atexit --with-gnu-ld --disable-libssp --disable-multilib --disable-decimal-float --enable-plugins --enable-lto --with-gmp=/home/tsy/F1C200S/flash/buildroot-2025.02.9/output/host --with-mpc=/home/tsy/F1C200S/flash/buildroot-2025.02.9/output/host --with-mpfr=/home/tsy/F1C200S/flash/buildroot-2025.02.9/output/host --with-pkgversion='Buildroot -g86fd5e06' --with-bugurl=https://gitlab.com/buildroot.org/buildroot/-/issues --without-zstd --disable-libquadmath --disable-libquadmath-support --disable-libsanitizer --enable-tls --enable-threads --without-isl --without-cloog --with-float=soft --with-abi=aapcs-linux --with-cpu=arm926ej-s --with-float=soft --with-mode=arm --enable-languages=c --with-build-time-tools=/home/tsy/F1C200S/flash/buildroot-2025.02.9/output/host/arm-buildroot-linux-uclibcgnueabi/bin --enable-shared --disable-libgomp
 Thread model: posix
 Supported LTO compression algorithms: zlib
-gcc version 13.4.0 (Buildroot 2025.02.9)
+gcc version 13.4.0 (Buildroot -g86fd5e06) 
 ```
 
 ### Compile Linux Kernel
