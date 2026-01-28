@@ -6,14 +6,58 @@ Linux BSP For Allinner F1C100S/F1C200S
 2.Supports mounting and playing audio files on CD ROMs or DVD ROMs in UFD and ISO9660 formats.  
 3.Supports decoding of audio files in WAV, FLAC and MP3 formats with any baud rate or bit rate.  
 
-### Hardware
+## Hardware
 On-Board ES9023P HiFi audio codec, can directly drive 32-ohm headphones.  
 On-Board USB to SATA bridge, supporting any SATA optical drive.  
 On-Board IR receiver, supporting IR remote control.  
 https://oshwhub.com/tsy2001/quanzhi-f1c100sf1c200shificd-mus
 
-### Preview
-https://www.bilibili.com/video/BV1griABUEk2
+## Preview
+https://www.bilibili.com/video/BV1griABUEk2  
+https://www.bilibili.com/video/BV1NMiGBAEQh
+
+### Resource consumption
+1.Decoding CD-DA music album:
+```sh
+Mem: 8068K used, 50160K free, 164K shrd, 0K buff, 2064K cached
+CPU:  26% usr  41% sys   0% nic  29% idle   0% io   0% irq   1% sirq
+Load average: 1.41 1.78 1.61 2/40 120
+  PID  PPID USER     STAT   VSZ %VSZ %CPU COMMAND
+  112    92 root     S    14292  25%  52% ./u8g2_hw_i2c_dvd
+  119    92 root     R     1612   3%   9% top -d 1
+   53     2 root     SW       0   0%   4% [usb-storage]
+```
+2.Decoding WAV audio file with 44100 sample rate, 16 bit depth:
+```sh
+Mem: 25928K used, 32300K free, 164K shrd, 52K buff, 19752K cached
+CPU:   8% usr  11% sys   0% nic  79% idle   0% io   0% irq   0% sirq
+Load average: 2.19 2.52 1.78 1/39 119
+  PID  PPID USER     STAT   VSZ %VSZ %CPU COMMAND
+  112    92 root     S    14292  25%  15% ./u8g2_hw_i2c_dvd
+  119    92 root     R     1612   3%   4% top -d 1
+   10     2 root     IW       0   0%   1% [rcu_preempt]
+```
+3.Decoding FLAC audio file with 96000 sample rate, 24 bit depth:
+```sh
+Mem: 45268K used, 12960K free, 164K shrd, 52K buff, 38684K cached
+CPU:  69% usr   8% sys   0% nic  29% idle   0% io   0% irq   0% sirq
+Load average: 3.06 2.52 1.64 1/39 118
+  PID  PPID USER     STAT   VSZ %VSZ %CPU COMMAND
+  112    92 root     S    14764  25%  72% ./u8g2_hw_i2c_dvd
+  118    92 root     R     1612   3%   3% top -d 1
+  111     2 root     IW       0   0%   1% [kworker/0:0-eve]
+```
+4.Decoding MP3 audio file with 44100 sample rate, 320kbps:
+```sh
+Mem: 21612K used, 36616K free, 164K shrd, 52K buff, 15372K cached
+CPU:  61% usr   6% sys   0% nic  32% idle   0% io   0% irq   0% sirq
+Load average: 2.83 2.27 1.39 1/40 118
+  PID  PPID USER     STAT   VSZ %VSZ %CPU COMMAND
+  112    92 root     S    14480  25%  62% ./u8g2_hw_i2c_dvd
+  118    92 root     R     1612   3%   5% top -d 1
+   10     2 root     IW       0   0%   1% [rcu_preempt]
+```
+
 
 ### Ubuntu 20.04 environment 
 ```sh
