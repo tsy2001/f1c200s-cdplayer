@@ -1,7 +1,15 @@
 # HiFi CD Player 
 Linux BSP For Allinner F1C100S/F1C200S  
 
+## Featres
+1.Support CD-DA format music album decoding and playback.  
+2.Supports mounting and playing audio files on CD ROMs or DVD ROMs in UFD and ISO9660 formats.  
+3.Supports decoding of audio files in WAV, FLAC and MP3 formats with any baud rate or bit rate.  
+
 ### Hardware
+On-Board ES9023P HiFi audio codec, can directly drive 32-ohm headphones.  
+On-Board USB to SATA bridge, supporting any SATA optical drive.  
+On-Board IR receiver, supporting IR remote control.  
 https://oshwhub.com/tsy2001/quanzhi-f1c100sf1c200shificd-mus
 
 ### Preview
