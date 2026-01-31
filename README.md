@@ -137,28 +137,7 @@ gcc version 13.4.0 (Buildroot -g86fd5e06)
 
 ### Flash to SD-CARD
 ``` sh
-  sudo fdisk /dev/sdb
-  d #delete all partitions
-  n p 1 2048 +16M
-  n p 2 2018 # just press "Enter"
-  w # save
-
-  sudo mkfs.vfat /dev/sdb1
-  sudo mkfs.ext4 /dev/sdb2
-```
-  copy f1c200s-linux5.7/arch/arm/boot/zImage  
-  and  f1c200s-linux5.7/arch/arm/boot/dts/suniv-f1c100s-licheepi-nano.dtb  
-  to /dev/sdb1
-``` sh
-  sudo tar -xf buildroot-2025.02.9/output/images/rootfs.tar -C /media/<username>/<your sdcard sdb2 partition>/
-  sync
-```
-recompile uboot  
-``` sh
-  git clone https://github.com/tsy2001/f1c200s-uboot.git -b nano-v2018.01
-  cd f1c200s-uboot/
-  make
-  sudo dd if=u-boot-sunxi-with-spl.bin of=/dev/sdb bs=1024 seek=8
+  not supported on v2.x
 ```
 
 

@@ -2,6 +2,21 @@
 仅支持W25Q128系列NOR FLASH存储器!!!  
 
 ## 更新日志  
+v2.1 修改Linux驱动
+``` sh
+1、硬件支持S16_LE、S24_LE格式输出。
+2、硬件支持8000Hz-192000Hz采样率。
+```
+
+v2.0 修复bug  
+``` sh
+1、修复了N多个BUG。
+2、添加中日韩字体显示。
+3、同时支持CD专辑、CD/DVD-ROM(UFD/ISO9660格式)、SDMMC挂载播放；
+4、支持WAV、FLAC、MP3解码。
+5、使用Alsa Dmix对不支持的采样率、比特率重采样至44.1Khz、16bit。
+```
+
 v1.1 修复bug  
 ``` sh
 1、更改交叉编译工具链为uclibc；
