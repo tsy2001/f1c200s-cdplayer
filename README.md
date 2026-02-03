@@ -16,6 +16,10 @@ https://oshwhub.com/tsy2001/quanzhi-f1c100sf1c200shificd-mus
 https://www.bilibili.com/video/BV1griABUEk2  
 https://www.bilibili.com/video/BV1NMiGBAEQh
 
+## Firmware Released
+<a href="https://github.com/tsy2001/f1c200s-cdplayer/tree/v2.x/firmware/w25q128">FIRMWARE</a>
+
+
 ### Resource consumption
 1.Decoding CD-DA music album:
 ```sh
