@@ -5,7 +5,7 @@
 [submodule "f1c200s-uboot"]
 	path = f1c200s-uboot
 	url = https://github.com/tsy2001/f1c200s-uboot.git
-	branch = cdplayer-bsp
+	branch = v2020.07-flash
 [submodule "buildroot-2025.02.9"]
 	path = buildroot-2025.02.9
 	url = https://github.com/tsy2001/buildroot-2025.02.9.git
