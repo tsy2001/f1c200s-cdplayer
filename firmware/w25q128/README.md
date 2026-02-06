@@ -2,7 +2,13 @@
 仅支持W25Q128系列NOR FLASH存储器!!!  
 
 ## 更新日志  
-v2.2 驱动更新、bug修复(暂未推送源码)
+v2.2.1 优化启动速度(暂未合并分支-optimize)
+``` sh
+1、裁剪Linux内核。
+2、裁剪SPL、裁剪Uboot。
+```
+
+v2.2 驱动更新、bug修复
 ``` sh
 1、SPI驱动添加DMA。
 2、修改Pin-Ctrl驱动；添加sdmmc-cd引脚上拉。
